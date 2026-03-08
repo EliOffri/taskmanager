@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taskmanager.R
 import com.example.taskmanager.databinding.FragmentMainBinding
-import com.example.taskmanager.model.Task
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -45,12 +44,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun setupRecyclerView() {
+        binding.recyclerViewTasks.layoutManager = LinearLayoutManager(requireContext())
+
         viewModel.allTasks.observe(viewLifecycleOwner) { tasks ->
             if (tasks.isEmpty()) {
-                binding.textViewEmptyState.visibility = View.VISIBLE
                 binding.recyclerViewTasks.visibility = View.GONE
+                binding.layoutEmptyState.visibility = View.VISIBLE
             } else {
-                binding.textViewEmptyState.visibility = View.GONE
+                binding.layoutEmptyState.visibility = View.GONE
                 binding.recyclerViewTasks.visibility = View.VISIBLE
 
                 val adapter = TaskAdapter(tasks) { task ->
