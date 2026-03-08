@@ -27,8 +27,11 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.taskmanager.ui.DetailsFragment"
-        android:label="Task Details"
-        tools:layout="@layout/fragment_details" />
+        android:label="Task Details">
+        <argument
+            android:name="taskId"
+            app:argType="integer" />
+    </fragment>
 
     <fragment
         android:id="@+id/settingsFragment"
