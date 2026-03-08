@@ -2,18 +2,17 @@
     <style name="Base.Theme.TaskManager" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">#1A237E</item>
         <item name="colorOnPrimary">@android:color/white</item>
-
         <item name="android:windowBackground">#F8FAFC</item>
         <item name="colorSurface">@android:color/white</item>
         <item name="colorOnSurface">#0F172A</item>
-
         <item name="colorControlNormal">@android:color/black</item>
     </style>
 
     <style name="Theme.TaskManager" parent="Base.Theme.TaskManager" />
 
     <style name="CustomPopupTheme" parent="ThemeOverlay.Material3.Dark">
-        <item name="android:colorBackground">#1A237E</item>
+        <item name="android:colorBackground">#1E293B</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 </resources>
