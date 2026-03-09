@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.taskmanager.R
 import com.example.taskmanager.databinding.FragmentSettingsBinding
 
@@ -36,6 +37,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             .setPositiveButton("Delete All") { _, _ ->
                 viewModel.deleteAll()
                 Toast.makeText(requireContext(), "All tasks cleared", Toast.LENGTH_SHORT).show()
+                findNavController().popBackStack(R.id.mainFragment, false)
             }
             .setNegativeButton("Cancel", null)
             .show()

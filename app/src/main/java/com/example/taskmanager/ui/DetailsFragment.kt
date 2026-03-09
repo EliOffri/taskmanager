@@ -1,7 +1,10 @@
 package com.example.taskmanager.ui
 
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -26,7 +29,23 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             task?.let {
                 binding.textViewDetailTitle.text = it.title
                 binding.textViewDetailDescription.text = it.description
-                binding.textViewDetailPriority.text = "Priority: ${it.priority}"
+
+                val (priorityLabel, priorityColor) = when (it.priority) {
+                    1    -> getString(R.string.priority_high)   to ContextCompat.getColor(requireContext(), R.color.priority_high)
+                    3    -> getString(R.string.priority_low)    to ContextCompat.getColor(requireContext(), R.color.priority_low)
+                    else -> getString(R.string.priority_medium) to ContextCompat.getColor(requireContext(), R.color.priority_medium)
+                }
+
+                binding.textViewDetailPriority.text = priorityLabel
+                binding.textViewDetailPriority.setTextColor(priorityColor)
+                binding.viewPriorityBar.setBackgroundColor(priorityColor)
+
+                val badgeBg = GradientDrawable().apply {
+                    shape = GradientDrawable.RECTANGLE
+                    cornerRadius = 40f
+                    setColor(Color.argb(40, Color.red(priorityColor), Color.green(priorityColor), Color.blue(priorityColor)))
+                }
+                binding.textViewDetailPriority.background = badgeBg
             }
         }
 
@@ -35,10 +54,9 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
                 .setTitle("Delete Task")
                 .setMessage("Are you sure you want to delete this task?")
                 .setPositiveButton("Delete") { _, _ ->
-                    val taskId = arguments?.getInt("taskId") ?: -1
-
+                    val id = arguments?.getInt("taskId") ?: -1
                     viewModel.allTasks.observe(viewLifecycleOwner) { tasks ->
-                        val taskToDelete = tasks.find { it.id == taskId }
+                        val taskToDelete = tasks.find { it.id == id }
                         taskToDelete?.let {
                             viewModel.delete(it)
                             findNavController().navigateUp()

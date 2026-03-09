@@ -8,6 +8,9 @@
     <color name="slate_800">#1E293B</color>
     <color name="slate_900">#0F172A</color>
 
+    <color name="badge_red">#FEE2E2</color>
+    <color name="badge_indigo">#EEF2FF</color>
+
     <color name="priority_high">#EF4444</color>
     <color name="priority_medium">#F59E0B</color>
     <color name="priority_low">#10B981</color>
