@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="No tasks yet"
+            android:text="@string/empty_state_title"
             android:textColor="#94A3B8"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tap the + button to get started."
+            android:text="@string/empty_state_subtitle"
             android:textColor="#64748B"
             android:textSize="14sp" />
 

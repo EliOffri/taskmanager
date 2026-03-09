@@ -1,8 +1,8 @@
 package com.example.taskmanager.data
 
 import androidx.room.*
-import androidx.lifecycle.LiveData
 import com.example.taskmanager.model.Task
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDao {
@@ -17,7 +17,7 @@ interface TaskDao {
     suspend fun delete(task: Task)
 
     @Query("SELECT * FROM task_table ORDER BY id ASC")
-    fun getAllTasks(): LiveData<List<Task>>
+    fun getAllTasks(): Flow<List<Task>>
 
     @Query("DELETE FROM task_table")
     suspend fun deleteAll()

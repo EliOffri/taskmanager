@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">מנהל משימות</string>
+    <string name="add_task">הוסף משימה</string>
+
+    <string name="priority_high">עדיפות גבוהה</string>
+    <string name="priority_medium">עדיפות בינונית</string>
+    <string name="priority_low">עדיפות נמוכה</string>
+    <string name="priority_item_high">גבוה</string>
+    <string name="priority_item_medium">בינוני</string>
+    <string name="priority_item_low">נמוך</string>
+
+    <string name="hint_task_title">כותרת המשימה</string>
+    <string name="hint_description">תיאור</string>
+    <string name="hint_select_priority">בחר עדיפות</string>
+    <string name="button_save">שמור משימה</string>
+    <string name="button_pick_image">בחר תמונה</string>
+    <string name="label_description">תיאור</string>
+    <string name="button_delete_task">מחק משימה</string>
+    <string name="cd_task_image">תמונת המשימה</string>
+
+    <string name="empty_state_title">אין משימות עדיין</string>
+    <string name="empty_state_subtitle">לחץ על כפתור + להתחיל</string>
+
+    <string name="dialog_delete_title">מחק משימה</string>
+    <string name="dialog_delete_message">האם אתה בטוח שברצונך למחוק משימה זו?</string>
+    <string name="dialog_delete_confirm">מחק</string>
+    <string name="dialog_delete_all_title">פעולה מסוכנת</string>
+    <string name="dialog_delete_all_message">פעולה זו תמחק את כל המשימות לצמיתות. האם אתה בטוח?</string>
+    <string name="dialog_delete_all_confirm">מחק הכל</string>
+    <string name="cancel">בטל</string>
+
+    <string name="toast_task_saved">המשימה נשמרה בהצלחה</string>
+    <string name="toast_task_deleted">המשימה נמחקה</string>
+    <string name="toast_all_cleared">כל המשימות נמחקו</string>
+
+    <string name="error_title_empty">הכותרת לא יכולה להיות ריקה</string>
+    <string name="default_description">לא סופק תיאור</string>
+
+    <string name="settings_app_name">מנהל משימות</string>
+    <string name="settings_version_tagline">גרסה 1.0</string>
+    <string name="settings_data_management">ניהול נתונים</string>
+    <string name="settings_clear_all">נקה את כל המשימות</string>
+    <string name="settings_clear_all_subtitle">מחק לצמיתות כל משימה</string>
+    <string name="settings_about">אודות</string>
+    <string name="settings_version_label">גרסה</string>
+    <string name="settings_version_number">1.0.0</string>
+    <string name="settings_built_with">נבנה עם</string>
+    <string name="settings_tech_stack">Kotlin · Room · Material 3</string>
+    <string name="settings_star_symbol">★</string>
+</resources>

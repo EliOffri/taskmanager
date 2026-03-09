@@ -10,7 +10,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Main task card -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,12 +23,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Priority color bar -->
                 <View
                     android:id="@+id/viewPriorityBar"
                     android:layout_width="match_parent"
                     android:layout_height="5dp"
                     android:background="@color/priority_medium" />
+
+                <ImageView
+                    android:id="@+id/imageViewTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:contentDescription="@string/cd_task_image" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -37,7 +43,6 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <!-- Priority badge -->
                     <TextView
                         android:id="@+id/textViewDetailPriority"
                         android:layout_width="wrap_content"
@@ -50,7 +55,6 @@
                         android:background="@drawable/priority_badge_bg"
                         android:layout_marginBottom="12dp" />
 
-                    <!-- Title -->
                     <TextView
                         android:id="@+id/textViewDetailTitle"
                         android:layout_width="match_parent"
@@ -60,7 +64,6 @@
                         android:textColor="?attr/colorOnSurface"
                         android:lineSpacingExtra="2dp" />
 
-                    <!-- Divider -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -68,18 +71,16 @@
                         android:layout_marginBottom="16dp"
                         android:background="@color/slate_200" />
 
-                    <!-- Description label -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DESCRIPTION"
+                        android:text="@string/label_description"
                         android:textSize="11sp"
                         android:textColor="#94A3B8"
                         android:textStyle="bold"
                         android:letterSpacing="0.12"
                         android:layout_marginBottom="8dp" />
 
-                    <!-- Description -->
                     <TextView
                         android:id="@+id/textViewDetailDescription"
                         android:layout_width="match_parent"
@@ -94,7 +95,6 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Delete button row -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="14dp"
-                    android:text="Delete Task"
+                    android:text="@string/button_delete_task"
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:textColor="#EF4444" />

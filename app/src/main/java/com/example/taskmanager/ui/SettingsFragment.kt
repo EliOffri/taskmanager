@@ -32,14 +32,14 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     private fun showDeleteConfirmationDialog() {
         AlertDialog.Builder(requireContext())
-            .setTitle("Dangerous Action")
-            .setMessage("This will delete ALL tasks forever. Are you sure?")
-            .setPositiveButton("Delete All") { _, _ ->
+            .setTitle(R.string.dialog_delete_all_title)
+            .setMessage(R.string.dialog_delete_all_message)
+            .setPositiveButton(R.string.dialog_delete_all_confirm) { _, _ ->
                 viewModel.deleteAll()
-                Toast.makeText(requireContext(), "All tasks cleared", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), R.string.toast_all_cleared, Toast.LENGTH_SHORT).show()
                 findNavController().popBackStack(R.id.mainFragment, false)
             }
-            .setNegativeButton("Cancel", null)
+            .setNegativeButton(R.string.cancel, null)
             .show()
     }
 

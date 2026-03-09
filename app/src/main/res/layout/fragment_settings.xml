@@ -10,7 +10,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +37,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Task Manager"
+                android:text="@string/settings_app_name"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="?attr/colorOnBackground"
@@ -47,18 +46,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Version 1.0"
+                android:text="@string/settings_version_tagline"
                 android:textSize="13sp"
                 android:textColor="#94A3B8"
                 android:layout_marginTop="4dp" />
 
         </LinearLayout>
 
-        <!-- Data Management Section -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DATA MANAGEMENT"
+            android:text="@string/settings_data_management"
             android:textSize="11sp"
             android:textColor="#94A3B8"
             android:letterSpacing="0.12"
@@ -111,7 +109,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Clear All Tasks"
+                        android:text="@string/settings_clear_all"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="#EF4444" />
@@ -119,7 +117,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Permanently delete every task"
+                        android:text="@string/settings_clear_all_subtitle"
                         android:textSize="12sp"
                         android:textColor="#94A3B8"
                         android:layout_marginTop="2dp" />
@@ -136,11 +134,10 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- About Section -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ABOUT"
+            android:text="@string/settings_about"
             android:textSize="11sp"
             android:textColor="#94A3B8"
             android:letterSpacing="0.12"
@@ -161,7 +158,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Version row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -195,14 +191,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Version"
+                            android:text="@string/settings_version_label"
                             android:textSize="15sp"
                             android:textColor="?attr/colorOnSurface" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1.0.0"
+                            android:text="@string/settings_version_number"
                             android:textSize="12sp"
                             android:textColor="#94A3B8"
                             android:layout_marginTop="2dp" />
@@ -216,7 +212,6 @@
                     android:layout_height="1dp"
                     android:background="@color/slate_200" />
 
-                <!-- Developer row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -235,7 +230,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="★"
+                            android:text="@string/settings_star_symbol"
                             android:textSize="16sp"
                             android:textColor="#6366F1" />
 
@@ -251,14 +246,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Built with"
+                            android:text="@string/settings_built_with"
                             android:textSize="15sp"
                             android:textColor="?attr/colorOnSurface" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kotlin · Room · Material 3"
+                            android:text="@string/settings_tech_stack"
                             android:textSize="12sp"
                             android:textColor="#94A3B8"
                             android:layout_marginTop="2dp" />

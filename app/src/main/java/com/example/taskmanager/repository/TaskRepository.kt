@@ -1,12 +1,12 @@
 package com.example.taskmanager.repository
 
-import androidx.lifecycle.LiveData
 import com.example.taskmanager.data.TaskDao
 import com.example.taskmanager.model.Task
+import kotlinx.coroutines.flow.Flow
 
 class TaskRepository(private val taskDao: TaskDao) {
 
-    val allTasks: LiveData<List<Task>> = taskDao.getAllTasks()
+    val allTasks: Flow<List<Task>> = taskDao.getAllTasks()
 
     suspend fun insert(task: Task) {
         taskDao.insert(task)
