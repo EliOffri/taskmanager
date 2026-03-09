@@ -16,6 +16,7 @@
     <string name="button_pick_image">Select Photo</string>
     <string name="label_description">DESCRIPTION</string>
     <string name="button_delete_task">Delete Task</string>
+    <string name="button_edit_task">Edit Task</string>
     <string name="cd_task_image">Task image</string>
 
     <string name="empty_state_title">No tasks yet</string>
@@ -30,6 +31,7 @@
     <string name="cancel">Cancel</string>
 
     <string name="toast_task_saved">Task saved successfully</string>
+    <string name="toast_task_updated">Task updated successfully</string>
     <string name="toast_task_deleted">Task deleted</string>
     <string name="toast_all_cleared">All tasks cleared</string>
 

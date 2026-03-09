@@ -42,6 +42,11 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             }
         }
 
+        binding.buttonEdit.setOnClickListener {
+            val bundle = Bundle().apply { putInt("taskId", taskId) }
+            findNavController().navigate(R.id.action_detailsFragment_to_addEditFragment, bundle)
+        }
+
         binding.buttonDelete.setOnClickListener {
             showDeleteConfirmation(taskId)
         }

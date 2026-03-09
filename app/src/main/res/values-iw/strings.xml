@@ -16,6 +16,7 @@
     <string name="button_pick_image">בחר תמונה</string>
     <string name="label_description">תיאור</string>
     <string name="button_delete_task">מחק משימה</string>
+    <string name="button_edit_task">ערוך משימה</string>
     <string name="cd_task_image">תמונת המשימה</string>
 
     <string name="empty_state_title">אין משימות עדיין</string>
@@ -30,6 +31,7 @@
     <string name="cancel">בטל</string>
 
     <string name="toast_task_saved">המשימה נשמרה בהצלחה</string>
+    <string name="toast_task_updated">המשימה עודכנה בהצלחה</string>
     <string name="toast_task_deleted">המשימה נמחקה</string>
     <string name="toast_all_cleared">כל המשימות נמחקו</string>
 

@@ -22,7 +22,12 @@
         android:id="@+id/addEditFragment"
         android:name="com.example.taskmanager.ui.AddEditFragment"
         android:label="Add Task"
-        tools:layout="@layout/fragment_add_edit" />
+        tools:layout="@layout/fragment_add_edit">
+        <argument
+            android:name="taskId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
 
     <fragment
         android:id="@+id/detailsFragment"
@@ -31,6 +36,9 @@
         <argument
             android:name="taskId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailsFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
     </fragment>
 
     <fragment
